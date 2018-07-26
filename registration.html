@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">  
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body > 
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+<section id="contact" style="width:100%; height:677px;">
+	 <marquee behavior="slide" scrolldelay=5 scrollamount=150   direction = "up" >		
+	 <div class="section-content"> 
+				<h1 class="section-header"> <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Registration Form</span></h1>
+				<h3>This is a sample registration process used to implement the Advanced Login Method </h3>
+			</div>
+			<div class="contact-section">
+			<div class="container">
+				<form   method="POST" action="registration.php" id="myform">
+					<div class="col-md-6 form-line">
+			  			<div class="form-group">
+			  				<label for="exampleInputUsername">Your Full name</label>
+					    	<input type="text" name="fname" class="form-control" id="" placeholder=" Enter Your Full Name" required>
+				  		</div><br>
+				  		<div class="form-group">
+					    	<label for="exampleInputEmail">Email Address</label>
+					    	<input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id" required>
+					  	</div><br>	
+					  	<div class="form-group">
+					    	<label for="telephone">Mobile No.</label>
+					    	<input type="tel" name="mobno" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no." required>
+			  			</div>
+						<h3><a href="login.html">Already Registerd? Login</a> </h2></h3>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="form-group">
+					    	<label for="exampleInputEmail">Password</label>
+					    	<input type="password" name="password" class="form-control" id="txtPassword" placeholder=" Enter Password" required>
+					  	</div>	<br>
+					  	<div class="form-group">
+					    	<label for="telephone">Confirm Password</label>
+					    	<input type="password" name="confpass" class="form-control" id="txtConfirmPassword" placeholder=" Confirm Your Password" required>
+			  			</div><br>
+						<div class="form-group">
+						<label for="telephone">Choose Color</label>
+						<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+						
+							<div class="btn-group mr-2" role="group" aria-label="First group">
+							<input type='radio' name="color" value="grey" required id="grey">&emsp;&emsp;
+							<input type='radio' name="color" value="red"	id="red">&emsp;&emsp;
+							<input type='radio' name="color" value="yellow"	id="yellow">&emsp;&emsp;
+							<input type='radio' name="color" value="lime"	id="lime">&emsp;&emsp;
+							<input type='radio' name="color" value="aqua"	id="aqua">&emsp;&emsp;
+							<input type='radio' name="color" value="blue"	id="blue">&emsp;&emsp;
+							<input type='radio' name="color" value="pink"	id="pink">&emsp;&emsp;
+							<input type='radio' name="color" value="green"	id="green">&emsp;&emsp;
+							<input type='radio' name="color" value="maroon"	id="maroon">&emsp;&emsp;
+							<input type='radio' name="color" value="purple"	id="purple">&emsp;&emsp;
+							<input type='radio' name="color" value="orange"	id="orange">&emsp;&emsp;
+							<input type='radio' name="color" value="olive"	id="olive">&emsp;&emsp;
+						
+							</div>
+						</div>
+						</div><br>
+						
+			  			<div>
+								
+			  				<h4><button type="submit" id="subimt" style="width:300px;" onclick="return Validate()" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Register</button></h4>
+			  			</div>
+			  			
+					</div>
+				</form>
+			</div>
+		</section></marquee>
+
+<script>
+    function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
